@@ -1,0 +1,23 @@
+@import url("grid.css");
+img{width:auto\9;height:auto;max-width:100%;vertical-align:middle;border:0;-ms-interpolation-mode:bicubic}
+p {line-height: 150%; margin: 5px 0;word-break: break-word !important;}
+h1,h2,h3,h4,h5,h6 {line-height:150%;font-weight:bold; margin:0.5em 0; padding:0}
+h1{font-size:2em;}
+h2{font-size:1.5em;}
+h3{font-size:1.17em;}
+h4{font-size:1em;}
+h5{font-size:.83em;}
+h6{font-size:.67em;}
+/* Grid setting */
+.grid-container {padding-left: 0px;padding-right: 0px; max-width:940px}
+.grid-5, .mobile-grid-5, .grid-10, .mobile-grid-10, .grid-15, .mobile-grid-15, .grid-20, .mobile-grid-20, .grid-25, .mobile-grid-25, .grid-30, .mobile-grid-30, .grid-35, .mobile-grid-35, .grid-40, .mobile-grid-40, .grid-45, .mobile-grid-45, .grid-50, .mobile-grid-50, .grid-55, .mobile-grid-55, .grid-60, .mobile-grid-60, .grid-65, .mobile-grid-65, .grid-70, .mobile-grid-70, .grid-75, .mobile-grid-75, .grid-80, .mobile-grid-80, .grid-85, .mobile-grid-85, .grid-90, .mobile-grid-90, .grid-95, .mobile-grid-95, .grid-100, .mobile-grid-100, .grid-33, .mobile-grid-33, .grid-66, .mobile-grid-66 {
+padding-left: 10px;padding-right: 10px;}
+.grid-parent {padding-left: 0;padding-right: 0;}
+.grid-parent-left {padding-left:0}
+.grid-parent-right {padding-right:0}
+@media only screen and (max-width:767px){
+.grid-parent-left {padding-left:10px}
+.grid-parent-right {padding-right:10px}
+}
+/* editor style */
+.grid-5, .mobile-grid-5, .grid-10, .mobile-grid-10, .grid-15, .mobile-grid-15, .grid-20, .mobile-grid-20, .grid-25, .mobile-grid-25, .grid-30, .mobile-grid-30, .grid-35, .mobile-grid-35, .grid-40, .mobile-grid-40, .grid-45, .mobile-grid-45, .grid-50, .mobile-grid-50, .grid-55, .mobile-grid-55, .grid-60, .mobile-grid-60, .grid-65, .mobile-grid-65, .grid-70, .mobile-grid-70, .grid-75, .mobile-grid-75, .grid-80, .mobile-grid-80, .grid-85, .mobile-grid-85, .grid-90, .mobile-grid-90, .grid-95, .mobile-grid-95, .grid-100, .mobile-grid-100, .grid-33, .mobile-grid-33, .grid-66, .mobile-grid-66, .grid-100, .mobile-grid-100 { border:1px solid rgba(0,0,0,0.1); }

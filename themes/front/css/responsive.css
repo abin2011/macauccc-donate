@@ -1,0 +1,120 @@
+/*
+ * File: style.css
+ * Project: Step Form
+ * File Created: Wednesday, 11th March 2020 2:38:33 pm
+ * Author: Jason (jasonworks@qq.com)
+ * -----
+ * Last Modified: 2020-04-13 Monday 4:45:50
+ * Modified By: Jason
+ * -----
+ * Copyright - 2020, CLickr Co.Ltd
+ */
+
+
+/* 
+  screen <= 992
+*/
+@media only screen and (max-width: 992px) {
+  
+  /* 
+    components
+  */
+
+  /* container */
+  .container{ width: 100%; }
+
+  /* step-form-title */
+  .step-form-title{ font-size: 20px; height: 60px; }
+
+  /* step-form-header */
+  .step-form-header .btn-area{ height: 60px; }
+
+  /* step-form-style */
+  .step-form-style .title{ text-align: left !important; }
+
+}
+
+
+/* 
+  screen <= 768
+*/
+@media only screen and (max-width: 768px) {
+
+
+  /* 
+    components
+  */
+
+  /* margins */
+  .mt-10{ margin-top: 60px; }
+  .mb-10{ margin-bottom: 60px; }
+
+  /* step-form-header */
+  .step-form-header{ padding: 10px 0; }
+  .step-form-header .btn-area{ width: 100%; float: none; text-align: center; height: auto; }
+
+  /* step-form-logo */
+  .step-form-logo{ float: none; text-align: center; max-width: 100%; border-bottom: 1px solid #dddcde; padding-bottom: 10px; }
+  .step-form-logo img{ max-height: 44px; display: inline-block; }
+
+  /* step-form-title */
+  .step-form-title{ border-left: 0; margin-left: 0; padding-left: 0; font-size: 18px; float: none; text-align: center; width: 100%; max-width: 100%; height: auto; padding: 10px 0; }
+
+  /* step-form-title-style02 */
+  .step-form-title-style02{ font-size: 18px; }
+
+  /* step-form-footer */
+  .step-form-footer{ padding: 20px 15px; font-size: 12px; }
+  .step-form-footer span{ display: block; }
+
+  /* step-form-search */
+  .step-form-search .title{ text-align: left !important; }
+
+  /* step-form-check */
+  .step-form-check{ padding-left: 0; padding-right: 0; }
+  .step-form-check .checkbox label, 
+  .step-form-check .radio label{ padding-left: 0; }
+  .step-form-check input[name='payment_receipt_note']{ width: 100%; }
+  .step-form-check input[name='subscribe_note']{ width: 100%; }
+
+  /* step-form-check-style02 */
+  .step-form-check-style02{ padding: 0 10px; }
+
+  /* step-form-style */
+  .step-form-style .title{ text-align: left !important; }
+
+  /* step-form-confirm */
+  .step-form-confirm .help-block{ margin-top: 10px; }
+
+  /* step-form-finish */
+  .step-form-finish .icon{ width: 80px; height: 80px; line-height: 80px; font-size: 44px; }
+  .step-form-finish h2{ font-size: 18px; }
+
+  /* steps-flow */
+  .steps-flow .item{ padding: 10px; }
+  .steps-flow .icon{ width: 30px; height: 30px; line-height: 30px; font-size: 16px; }
+  .steps-flow .main{ margin-left: 40px; font-size: 18px; line-height: 30px; }
+
+  /* form-radio-money */
+  .form-radio-money{ margin-top: -10px; }
+  .form-radio-money>label,
+  .form-radio-money .radio-inline+.radio-inline{ margin-top: 10px; margin-left: 0; width: 45%; }
+
+  /* form-radio-payment */
+  .form-radio-payment>label{ max-width: 45%; }
+  .form-radio-payment .radio-inline{ margin-bottom: 15px; margin-right: 10px; }
+  .form-radio-payment .radio-inline+.radio-inline{ margin-left: 0; } 
+  .form-radio-payment span{ font-size: 12px; }
+
+  /* form-radio-payment-confirm */
+  .form-radio-payment-confirm{ margin-top: 5px; }
+
+  /* step-additional-form */
+  .step-additional-form .form-group+.form-group{ margin-left: 0; }
+
+  /* jumper-box */
+  .jumper-box{ padding: 30px 15px; }
+  .jumper-title{ font-size: 20px;  padding-bottom: 30px; }
+  .jumper-calling .name{ font-size: 20px; }
+
+}

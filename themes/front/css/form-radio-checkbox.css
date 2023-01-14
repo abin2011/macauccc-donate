@@ -1,0 +1,36 @@
+/*
+ * File: d:\AppServ\www\step-form\css\form-radio-checkbox.css
+ * Project: d:\AppServ\www\step-form\css
+ * Created: 2020-03-12 3:26:07
+ * Author: Jason
+ * -----
+ * Last Modified: 2020-03-28 Saturday 11:15:46
+ * Modified By: Jason
+ * -----
+ * Copyright (c) 2020 Clickr
+ */
+
+
+/* 
+  custom-checkbox 
+*/
+.custom-checkbox { display: block; position: relative; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.custom-checkbox  input { opacity: 0; cursor: pointer; height: 0; width: 0;}
+.custom-checkbox .checkmark { height: 20px; width: 20px; background-color: #eee; border: 1px solid #c8c8c8; border-radius: 5px; display: inline-block; position: relative; vertical-align: middle; }
+.custom-checkbox:hover input ~ .checkmark { background-color: #ccc; }
+.custom-checkbox input:checked ~ .checkmark { background-color: #006F8D; border-color: #006F8D; }
+.custom-checkbox .checkmark:after { content: ""; position: absolute; display: none; }
+.custom-checkbox input:checked ~ .checkmark:after { display: block; }
+.custom-checkbox .checkmark:after { left: 6px; top: 3px; width: 6px; height: 10px; border: solid white; border-width: 0 3px 3px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+
+/* 
+  custom-radio 
+*/
+.custom-radio { display: block; position: relative; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+.custom-radio input { opacity: 0; cursor: pointer; }
+.custom-radio .checkmark { height: 20px; width: 20px; background-color: #eee; border-radius: 50%; position: relative; vertical-align: middle; display: inline-block; border: 1px solid #c8c8c8; }
+.custom-radio:hover input ~ .checkmark { background-color: #ccc; }
+.custom-radio input:checked ~ .checkmark { background-color: #006F8D; border-color: #006F8D; }
+.custom-radio .checkmark:after { content: ""; position: absolute; display: none; }
+.custom-radio input:checked ~ .checkmark:after { display: block; }
+.custom-radio .checkmark:after { top: 5px; left: 5px; width: 8px; height: 8px; border-radius: 50%; background: white; }

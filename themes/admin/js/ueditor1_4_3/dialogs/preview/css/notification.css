@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+.notification{font-size:14px;line-height:18px;position:relative;width:100%;margin:10px auto;text-align:left;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}
+.notification p,.m_message p{font-weight:bold; padding:15px; display:block; text-align:center; margin:0}
+.notification.success,.m_success{background-color:#ebf6e0;color:#5f9025;border:1px solid #b3dc82}
+.notification.error,.m_error{background-color:#ffe9e9;color:#de5959;border:1px solid #fbc4c4}
+.notification.notice,.m_notice{background-color:#e9f7fe;color:#5091b2;border:1px solid #b6d7e8}
+.notification.success .close,.notification.error .close,.notification.warning .close,.notification.notice .close{padding:0 14px;position:absolute;right:0;top:20px;display:block;height:8px;weight:8px}
+.notification.success .close{background:url(../img/base/alert_boxes_close_ico.png) 0 -8px no-repeat}
+.notification.error .close{background:url(../img/base/alert_boxes_close_ico.png) 0 0 no-repeat}
+.notification.notice .close{background:url(../img/base/alert_boxes_close_ico.png) 0 -24px no-repeat}
+.m_message{width:100%;margin:10px auto;text-align:left;font-size:14px;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}
