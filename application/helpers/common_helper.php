@@ -3,7 +3,7 @@
  * @Author            :  Clickr Abin
  * @Create Date       :  2019-07-08 18:18:11
  * @Last Modified by  :  Clickr Abin
- * @Last Modified time:  2022-08-03 20:50:33
+ * @Last Modified time:  2023-01-30 11:40:52
  * @email             :  info@clickrweb.com
  * @description       :  ClickrCMS公共功能函數
  * @version [<4.0>] [<ClickrCMS公共功能函數>]
@@ -387,7 +387,7 @@ if(!function_exists('helper_order_send_email')){
       $config['smtp_user']                 = $CI->data['mail_smtp_username'];
       $config['smtp_pass']                 = $CI->data['mail_smtp_password'];
       $config['smtp_port']                 = $CI->data['mail_smtp_port'];
-      $config['smtp_timeout']              = '30';
+      $config['smtp_timeout']              = '60';
       $CI->data['mail_sender']             = $CI->data['mail_smtp_username'];
     }else if($CI->data['mail_protocol']=='sendmail'){
       $config['mailpath']                  = $CI->data['mail_sendmail_path'];
@@ -416,7 +416,7 @@ if(!function_exists('helper_order_send_email')){
     $CI->email->message($email_client_message);
     $send_client=$CI->email->send();
     if(!$send_client){
-      log_message('debug','_send_email function send_client not work:'.$CI->email->print_debugger());
+      log_message('error','_send_email function send_client not work:'.$CI->email->print_debugger());
     }
     $CI->email->clear(TRUE); //email 变量清空 包括附件
 
@@ -432,7 +432,7 @@ if(!function_exists('helper_order_send_email')){
     $CI->email->message($email_merchant_message);
     $send_merchant=$CI->email->send();
     if(!$send_merchant){
-      log_message('debug','_send_email function send_merchant not work:'.$CI->email->print_debugger());
+      log_message('error','_send_email function send_merchant not work:'.$CI->email->print_debugger());
     }
     return $send_client+$send_merchant;
   }

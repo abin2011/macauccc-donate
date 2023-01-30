@@ -3,7 +3,7 @@
  * @Author            :  Clickr Abin
  * @Create Date       :  2019-07-09 11:39:27
  * @Last Modified by  :  Clickr Abin
- * @Last Modified time:  2020-04-13 11:02:00
+ * @Last Modified time:  2023-01-30 12:16:49
  * @email             :  info@clickrweb.com
  * @description       :  前後台的總控制器.啟動器,獲取語言,設置.
  */
@@ -164,9 +164,9 @@ class Lang_Controller extends CI_Controller{
 
   //獲取網站語言
   protected function CI_get_language(){
-    $lang_id=$this->input->cookie('language_id');
-    $lang_id=!empty($lang_id)?$lang_id:$this->data['default_language'];
-    // $lang_id=$this->data['default_language'];
+    // $lang_id=$this->input->cookie('language_id');
+    // $lang_id=!empty($lang_id)?$lang_id:$this->data['default_language'];
+    $lang_id=$this->data['default_language'];
     $this->load->model('language_mdl');
     $query=$this->language_mdl->get_many_by(array('status'=>1));
     if(!empty($query) && is_array($query)){

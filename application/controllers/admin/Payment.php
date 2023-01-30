@@ -3,7 +3,7 @@
  * @Author            :  Clickr Abin
  * @Create Date       :  2020-04-07 16:49:11
  * @Last Modified by  :  Clickr Abin
- * @Last Modified time:  2020-04-08 13:23:38
+ * @Last Modified time:  2023-01-30 11:15:14
  * @email             :  info@clickrweb.com
  * @description       :  支付管理後台控制器 payment controller
  */
@@ -200,8 +200,16 @@ class Payment extends Admin_Controller {
   //設置支付
   public function setting($payment_id=''){
     if(!empty($payment_id) && is_numeric($payment_id)){
-      $list=$this->payment_mdl->get($payment_id);
-      $this->data['list']=$list;
+
+      $payment=$this->payment_mdl
+        ->join_description($this->data['default_language'])
+        ->get_by(array('n.id'=>$payment_id));
+
+      if(empty($payment) || !is_array($payment))
+        show_error('參數不對.沒有該ID的列表項信息');
+
+      $this->data['list']          = $payment;
+      $this->data['payment_title'] = $payment['title'];
 
       $filter=array(
         'status'        =>1,
@@ -214,7 +222,7 @@ class Payment extends Admin_Controller {
           $this->data[$key]=$value;
         }
       }
-      $this->load->view('admin/payment_setting_'.$list['payment_key'], $this->data);
+      $this->load->view('admin/payment_setting_'.$payment['payment_key'], $this->data);
     }else{
       show_error('對不起,參數出錯!');
       exit;

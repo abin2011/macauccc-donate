@@ -263,11 +263,6 @@
               <span><?php echo $item['title']?></span>
             </label>
             <?php endforeach;?>
-            <label class="radio-inline">
-              <input type="radio" name="payment_method" value="unionpay">
-              <figure><img src="<?=base_url('themes/front/images/mpay.png')?>" alt="MPay" class="img-responsive"></figure>
-              <span>MPay</span>
-            </label>
           </div>
           <?php endif;?>
         </div><!-- col-md-9 main -->

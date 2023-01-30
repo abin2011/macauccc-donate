@@ -16,6 +16,11 @@
         <form id="form" action="<?=site_url('admin/payment/modify_setting');?>" method="post" class="layui-form">
           <div class="layui-row layui-col-space15">
             <div class="layui-col-md-12">
+              <div class="layui-form-item layui-bg-cyan text-center" style="padding:10px;">
+                <p>現正配置 <?php echo isset($payment_title)?$payment_title:'' ?> 支付方式參數</p>
+              </div>
+            </div>
+            <div class="layui-col-md-12">
               <div class="layui-form-item required">
                 <label class="layui-form-label">商戶MID</label>
                 <div class="layui-input-block">
