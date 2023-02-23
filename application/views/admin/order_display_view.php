@@ -33,6 +33,10 @@
                       <td colspan="3">MOP <?php echo isset($donate_money)?$donate_money:''?></td>
                     </tr>
                     <tr>
+                      <td width="20%"><b>堂會：</b></td>
+                      <td colspan="3"><?php echo isset($donate_church)?$donate_church:''?></td>
+                    </tr>
+                    <tr>
                       <td><b>捐款項目:</b></td>
                       <td colspan="3">
                         <?php if(isset($donate_item_array) && !empty($donate_item_array)):?>

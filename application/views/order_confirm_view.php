@@ -61,6 +61,19 @@
       </div>
       <!-- row -->
       <div class="row">
+        <div class="col-md-3 title text-right"><span>堂會</span></div>
+        <!-- col -->
+        <div class="col-md-9 main">
+          <div class="form-group">
+            <div class="confirm-info">
+              <?php echo isset($donate_church)?$donate_church:'';?>
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+      </div>
+      <!-- row -->
+      <div class="row">
         <div class="col-md-3 title text-right"><span><?=lang('donate_block_item');?></span></div>
         <!-- col -->
         <div class="col-md-9 main">

@@ -80,6 +80,23 @@
       </div>
       <!-- row -->
       <div class="row required">
+        <div class="col-md-3 title text-right"><span>堂會</span></div>
+        <!-- col -->
+        <div class="col-md-3 main">
+          <div class="form-group form-radio-money">
+            <select name="donate_church" class="form-control" required>
+              <option value="">請選擇堂會</option>
+              <?php if(isset($donate_church_option) && !empty($donate_church_option)):?>
+              <?php foreach($donate_church_option as $optionText):?>
+              <option value="<?php echo $optionText;?>" <?=set_select('donate_church',$optionText)?> <?=isset($donate_church)&&$donate_church==$optionText?'selected':'';?>><?php echo $optionText;?></option>
+              <?php endforeach;?>
+              <?php endif;?>
+            </select>
+          </div>
+        </div>
+        <!-- col -->
+      </div>
+      <div class="row required">
         <div class="col-md-3 title text-right"><span><?=lang('donate_block_item');?></span></div>
         <!-- col -->
         <div class="col-md-9 main">

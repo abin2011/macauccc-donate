@@ -3,7 +3,7 @@
  * @Author            :  Clickr Abin
  * @Create Date       :  2019-07-20 12:31:18
  * @Last Modified by  :  Clickr Abin
- * @Last Modified time:  2020-05-07 15:38:30
+ * @Last Modified time:  2023-02-23 14:58:00
  * @email             :  info@clickrweb.com
  * @description       :  前台首頁控制器,Home Controller
  */
@@ -49,6 +49,7 @@ class Home extends Lang_Controller {
         'order_session'=>array(
           'donate_money'         =>$this->input->post('donate_money',TRUE),
           'donate_money_other'   =>$this->input->post('donate_money_other',TRUE),
+          'donate_church'        =>$this->input->post('donate_church',TRUE),
           'donate_item'          =>!empty($donate_item_array)?json_encode($donate_item_array):'',
           'donate_item_other'    =>$this->input->post('donate_item_other',TRUE),
 
@@ -87,6 +88,7 @@ class Home extends Lang_Controller {
     $this->form_validation->set_rules('donate_item[]',lang('donate_block_item'),'trim|required');
     $this->form_validation->set_rules('donate_item_other',lang('donate_block_item_other'),'trim|max_length[100]');
     
+    $this->form_validation->set_rules('donate_church','堂會','trim|required|max_length[100]');
 
     $this->form_validation->set_rules('donate_gender',lang('donate_block_gender'),'trim|required|max_length[50]');
     $this->form_validation->set_rules('donate_firstname',lang('donate_block_lname'),'trim|required|max_length[50]');
@@ -160,6 +162,11 @@ class Home extends Lang_Controller {
     );
     $donate_item_string = $this->data['donate_item'.$this->data['lang_id']];
     $this->data['donate_item_option'] = !empty($donate_item_string)?explode(',',$donate_item_string):$default_donate_item;
+
+
+    $donate_church_string = $this->data['donate_church'.$this->data['lang_id']];
+    $this->data['donate_church_option'] = !empty($donate_church_string)?explode(',',$donate_church_string):array();
+
 
     $order_session=$this->session->userdata('order_session');
     if(!empty($order_session) && is_array($order_session)){

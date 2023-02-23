@@ -12,13 +12,16 @@
         <div class="layui-form-item">
           <label class="layui-form-label"><?php echo $item['description'];?></label>
           <div class="layui-input-block">
-            <?php if(in_array($setting_key,array('site_description_cn','site_description_en','site_description_pt','donate_item1','donate_item2','donate_item3','donate_item4'))):?>
+            <?php if(in_array($setting_key,array('site_description_cn','site_description_en','site_description_pt','donate_item1','donate_item2','donate_item3','donate_item4','donate_church1'))):?>
             <textarea name="<?php echo $setting_key;?>" placeholder="请输入<?php echo $item['description'];?>" class="layui-textarea"><?php echo $item['setting_value'];?></textarea>
             <?php else:?>
             <input type="text" name="<?php echo $setting_key;?>" placeholder="请输入<?php echo $item['description'];?>" class="layui-input" value="<?php echo $item['setting_value'];?>">
             <?php endif;?>
             <?php if(strstr($setting_key,'donate_item')):?>
             <div class="layui-form-mid layui-word-aux"><i class="fas fa-info-circle"></i> 回車隔開捐款項目,最後一項為其他,帶輸入框補充!</div>
+            <?php endif;?>
+            <?php if(strstr($setting_key,'donate_church')):?>
+            <div class="layui-form-mid layui-word-aux"><i class="fas fa-info-circle"></i> 回車隔開堂會選項!</div>
             <?php endif;?>
           </div>
         </div><!--/layui-form-item-->
@@ -41,9 +44,9 @@ $(document).ready(function() {
     $('.tag a').html("<i class='fas fa-times'></i>");
   }
   // tags input
-  $('textarea[name^="donate_item"]').tagsInput({
+  $('textarea[name^="donate_item"],textarea[name^="donate_church"]').tagsInput({
     'width':'100%',
-    'defaultText':'请输入網站關鍵字',
+    'defaultText':'请输入選項',
     'onChange' : tagsChange
   });
 });

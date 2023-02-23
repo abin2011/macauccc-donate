@@ -3,7 +3,7 @@
  * @Author            :  Clickr Abin
  * @Create Date       :  2020-03-14 11:22:24
  * @Last Modified by  :  Clickr Abin
- * @Last Modified time:  2020-04-11 18:38:14
+ * @Last Modified time:  2023-02-23 14:59:06
  * @email             :  info@clickrweb.com
  * @description       :  在線捐款控制器 Order controller
  */
@@ -32,6 +32,7 @@ class Order extends Lang_Controller {
     $order_data=array(
       'order_status_id'      =>0, //狀態為0 等待反饋結果.
       'donate_money'         =>$donate_money,
+      'donate_church'        =>$order_session['donate_church'],
       'donate_item'          =>$order_session['donate_item'],
       'donate_item_other'    =>$order_session['donate_item_other'],
       'donate_gender'        =>$order_session['donate_gender'],
