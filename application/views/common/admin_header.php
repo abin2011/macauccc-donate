@@ -84,7 +84,7 @@
           <dd class="<?=$subPage=='page'?'layui-this':''?>">
             <a href="<?=site_url('admin/page')?>" title="基本頁面">基本頁面</a>
           </dd>
-          <dd class="<?=$subPage=='payment'?'layui-this':''?>">
+          <dd class="<?=$subPage=='payment'?'layui-this':''?>" style="display:none;">
             <a href="<?=site_url('admin/payment')?>" title="支付管理">支付管理</a>
           </dd>
           <dd class="<?=$subPage=='order'?'layui-this':''?>">
