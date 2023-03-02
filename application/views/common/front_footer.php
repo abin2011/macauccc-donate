@@ -1,5 +1,5 @@
 <div class="step-form-footer text-center mt-3">
-  <span>&copy; 2020 <?=lang('donate_page_title');?></span>
+  <span>&copy; 2023 <?=lang('donate_page_title');?></span>
 </div>
 </div><!-- wrapper -->
 
