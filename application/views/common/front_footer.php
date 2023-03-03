@@ -1,5 +1,5 @@
 <div class="step-form-footer text-center mt-3">
-  <span>&copy; <?php echo date('Y');?> <?=lang('donate_page_title');?></span>
+<span>&copy; <?php echo date('Y');?> <?=lang('donate_page_title');?></span>
 </div>
 </div><!-- wrapper -->
 
