@@ -14,7 +14,7 @@
         <tr>
           <td width="50%"><a href="http://macauccc.org"><img src="<?=base_url('themes/front/images/logo.png')?>" alt="<?=lang('donate_page_title');?>"></a></td>
           <td style="text-align: right;" width="50%">
-            <a href="http://macauccc.org" style="background: #d37b92; color: #FFF; text-decoration: none; display: inline-block; border-radius: 5px; font-size: 14px; padding: 10px 15px;"><?=lang('donate_official');?></a>
+            <a href="https://macauccc.org" style="background: #d37b92; color: #FFF; text-decoration: none; display: inline-block; border-radius: 5px; font-size: 14px; padding: 10px 15px;"><?=lang('donate_official');?></a>
             <?php if(isset($email_merchant) && $email_merchant):?>
             <a href="<?=base_url('admin')?>" style="background: #089AD8; color: #FFF; text-decoration: none; display: inline-block; border-radius: 5px; font-size: 14px; padding: 10px 15px; margin-left: 10px;"><?=lang('donate_admin');?></a>
             <?php endif;?>
@@ -79,14 +79,14 @@
             <div style="font-family: Arial, Helvetica, sans-serif; color: #d37b92; font-size: 20px; ">MOP <span style="font-size: 40px;"><?php echo isset($donate_money)?$donate_money:'';?></span></div>
           </div>
           <div style="text-align: center;">
-            <a href="http://macauccc.org" style="background: #d37b92; color: #FFF; text-decoration: none; display: inline-block; border-radius: 5px; font-size: 16px; padding: 15px 30px;"><?=lang('donate_email_link');?></a>
+            <a href="https://macauccc.org" style="background: #d37b92; color: #FFF; text-decoration: none; display: inline-block; border-radius: 5px; font-size: 16px; padding: 15px 30px;"><?=lang('donate_email_link');?></a>
           </div>
         </div>
       <?php endif;?>
     </div>
     <!-- main -->
     <div style="text-align: center; color: #666; border-top: 1px solid #e6e6e6; padding: 15px; margin: 0 15px; font-size: 12px;">
-      <span>&copy; 2020 <?=lang('donate_page_title');?></span>
+      <span>&copy; <?php echo date('Y');?> <?=lang('donate_page_title');?></span>
       <span>技術支援：<a href="https://clickrweb.com" style="color:#666; text-decoration: none;">力嘉Clickr</a></span>
     </div>
     <!-- footer -->
